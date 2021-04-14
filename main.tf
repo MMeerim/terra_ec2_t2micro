@@ -1,11 +1,12 @@
 terraform {
   backend "remote" {
     # The name of Terraform Cloud Organization
-    organiztion = "NUIT_CIPS_AUTO_QA"
+    organization = "NUIT_CIPS_AUTO_QA"
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
       name = "terra_ec2_t2micro"
       }
+    region = var.region
     }
   }
 
