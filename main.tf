@@ -10,7 +10,7 @@ terraform {
   }
 
 provider "aws" {
-  region = var.region
+  region = var.aws_region
 }
 
 resource "aws_key_pair" "ec2-user-public" {
