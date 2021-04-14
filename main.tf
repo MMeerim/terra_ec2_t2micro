@@ -6,9 +6,12 @@ terraform {
     workspaces {
       name = "terra_ec2_t2micro"
       }
-    region = var.region
     }
   }
+
+provider "aws" {
+  region = var.region
+}
 
 resource "aws_key_pair" "ec2-user-public" {
   key_name   = var.my_key_name  
