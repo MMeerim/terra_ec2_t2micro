@@ -1,10 +1,6 @@
 variable "aws_region" {  
 }
 
-variable "access_key" {
-  }
-variable "secret_key" {
-  }
 #key-pair variables
 
 variable "my_key_name" {  
