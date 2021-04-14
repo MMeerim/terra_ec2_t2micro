@@ -9,12 +9,6 @@ terraform {
     }
   }
 
-provider "aws" {
-  region = "us-east-1"
-  access_key = var.access_key
-  secret_key = var.secret_key
-}
-
 resource "aws_key_pair" "ec2-user-public" {
   key_name   = var.my_key_name  
   public_key = var.my_publickey
