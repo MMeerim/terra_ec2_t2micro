@@ -14,10 +14,6 @@ provider "aws" {
   access_key = "aws_access_key_id"
   secret_key = "aws_secret_access_key"
 }
-resource "aws_key_pair" "ec2-user-public" {
-  key_name   = var.my_key_name  
-  public_key = var.my_publickey
-}
 
 resource "aws_eip" "for_each" {
   count    = var.eip_count
