@@ -50,6 +50,7 @@ module "my_sg" {
 
 module "my_ec2" {
   source                 = "terraform-aws-modules/ec2-instance/aws"  
+  name                   = var.my_ec2_name
   instance_count         = var.ec2_count
   ami                    = data.aws_ami.my_ami.id
   instance_type          = var.ec2_type
