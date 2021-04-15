@@ -54,6 +54,7 @@ module "my_ec2" {
   instance_type          = var.ec2_type
   vpc_security_group_ids = [ module.my_sg.this_security_group_id ]
   subnet_id              = element(module.my_vpc.public_subnets, 0)
+  user_data              = file("userdata.sh")
   tags                   = var.ec2_tags  
 }
 
