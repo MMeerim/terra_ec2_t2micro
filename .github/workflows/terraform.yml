@@ -47,7 +47,7 @@ name: 'Terraform'
 on:
   push:
     branches:
-    - terraform.auto.tfvars
+    - main
 
 jobs:
   terraform:
