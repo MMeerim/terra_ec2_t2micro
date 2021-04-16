@@ -29,9 +29,10 @@ sg_egress_rules  = ["all-all"]
 #my-ec2-values
 
 my_ec2_name = "poc"
+my_ec2_name = "poc2"
 ec2_count   = 1
 ec2_type    = "t2.micro" 
-ec2_tags    = { Name = "poc"}
+ec2_tags    = { Name = "poc2"}
 
 
 #my-data-source-values
