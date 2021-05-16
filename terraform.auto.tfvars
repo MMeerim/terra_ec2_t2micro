@@ -28,7 +28,7 @@ sg_egress_rules  = ["all-all"]
 
 #my-ec2-values
 
-my_ec2_name = "demo"
+my_ec2_name = "demob2test"
 ec2_count   = 1
 ec2_type    = "t2.micro" 
 ec2_tags    = { Name = "test"}
