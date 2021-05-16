@@ -52,7 +52,6 @@ module "my_ec2" {
   instance_count         = var.ec2_count
   ami                    = data.aws_ami.my_ami.id
   instance_type          = var.ec2_type
-  vpc_security_group_ids = [ module.my_sg.this_security_group_id ]
   subnet_id              = element(module.my_vpc.public_subnets, 0)
   tags                   = var.ec2_tags  
 }
