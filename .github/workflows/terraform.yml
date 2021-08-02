@@ -84,3 +84,11 @@ jobs:
       #- name: Terraform Apply
       #if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       #run: terraform apply -auto-approve
+     # Ansible
+    - name: Awx playbook credentials
+      uses: swinton/httpie.action@master
+      with: 
+        secrets: USER_PASSWORD
+    
+    - name: Trigger playbook
+      run: POST https://awxdev.ci.northwestern.edu/api/v2/job_templates/18/launch
